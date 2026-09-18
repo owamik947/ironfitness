@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Iron Empire | Join Now</title>
+
+
+<link rel="stylesheet" href="stylesheets.css">
+
+
+</head>
+
+<body class="join-page">
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+
+<div class="header-content">
+
+    <div class="logo">
+        Iron Empire
+    </div>
+
+    <a href="index.html" class="home-button">
+        ← Home
+    </a>
+
+</div>
+
+
+</header>
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav class="page-nav">
+
+    <!-- when you click about us . the followig pages 
+ will also be available for the user through navigations, the pages are sort of linked -->
+
+
+    <a href="About-us.html">
+        About Us
+    </a>
+
+    <a href="vision.html">
+        Vision
+    </a>
+
+    <a href="mission.html">
+        Mission
+    </a>
+
+    <a href="why-us.html">
+        Why Choose Us
+    </a>
+
+    <a href="membership.html">Membership</a>
+
+    <a href="meettheempireteam.html">
+        Meet the team
+    </a>
+
+    <a href="didyouknow.html">
+        Did You Know
+    </a>
+
+    <a href="contactus.html">
+        Contact Us
+    </a>
+    
+    <a href="join.html" class="active">
+        Join Now
+    </a>
+
+</nav>
+<!-- =========================
+     JOIN FORM
+========================== -->
+
+<main>
+
+
+<section class="join-box">
+
+    <div class="gold-line"></div>
+
+    <h1>
+        Join Now
+    </h1>
+
+    <p class="intro">
+        Complete the form below to become a member
+        of the Iron Empire.
+    </p>
+
+
+    <form id="joinForm">
+
+
+        <!-- NAME to fill in the form -->
+
+        <div class="form-group">
+
+            <label for="name">
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+        </div>
+
+
+        <!-- SURNAME to fill in the form -->
+
+        <div class="form-group">
+
+            <label for="surname">
+                Surname
+            </label>
+
+            <input
+                type="text"
+                id="surname"
+                placeholder="Enter your surname"
+                required
+            >
+
+        </div>
+
+
+        <!-- MEMBERSHIP , choose the best one for you-->
+
+        <div class="form-group">
+
+            <label for="membership">
+                Membership Plan
+            </label>
+
+            <select id="membership" required>
+
+                <option value="">
+                    Select a membership plan
+                </option>
+
+                <option value="basic">
+                    Basic Membership
+                </option>
+
+                <option value="standard">
+                    Standard Membership
+                </option>
+
+                <option value="premium">
+                    Premium Membership
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PAYMENT -->
+
+        <div class="form-group">
+
+            <label>
+                Form of Payment
+            </label>
+
+            <div class="payment-options">
+
+
+                <div class="payment-option">
+
+                    <input
+                        type="radio"
+                        id="credit"
+                        name="payment"
+                        value="credit"
+                        required
+                    >
+
+                    <label for="credit">
+                        Credit Card
+                    </label>
+
+                </div>
+
+
+                <div class="payment-option">
+
+                    <input
+                        type="radio"
+                        id="debit"
+                        name="payment"
+                        value="debit"
+                    >
+
+                    <label for="debit">
+                        Debit Card
+                    </label>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- JOIN BUTTON -->
+
+        <button
+            type="submit"
+            class="submit-button"
+        >
+            Join Iron Empire
+        </button>
+
+
+    </form>
+
+
+    <!-- =========================
+         SUCCESS MESSAGE
+    ========================== -->
+
+
+    <!-- Tells you if you have been successfuly joined -->
+    <div
+        id="successMessage"
+        class="success-message"
+    >
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>
+            Successfully Joined!
+        </h2>
+
+        <p>
+            Welcome to Iron Empire!
+            Your membership has been successfully registered.
+        </p>
+
+        <a
+            href="index.html"
+            class="success-button"
+        >
+            Back to Home
+        </a>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+
+© 2026 Iron Empire.
+Train Hard. Stay Disciplined. Become Unstoppable.
+
+</footer>
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+    const form = document.getElementById("joinForm");
+
+    const successMessage =
+        document.getElementById("successMessage");
+
+
+    form.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        // Hide the form
+        form.style.display = "none";
+
+        // Show success message
+        successMessage.style.display = "block";
+
+        // Scroll to success message
+        successMessage.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    });
+
+</script>
+
+</body>
+
+</html>

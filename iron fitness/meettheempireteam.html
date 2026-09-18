@@ -1,0 +1,795 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meet The Empire Team | Iron Empire</title>
+
+    <link rel="stylesheet" href="stylesheets.css">
+</head>
+
+
+<body class="meettheempireteam-page">
+
+
+
+<!-- =========================================
+     FIXED SITE NAVIGATION
+========================================= -->
+
+<nav class="site-navigation">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="About-us.html">
+        About Us
+    </a>
+    <a href="vision.html">
+        Vision
+    </a>
+
+    <a href="mission.html">
+        Mission
+    </a>
+
+    
+<a href="why-us.html">
+        Why Choose Us
+    </a>
+
+    <a href="membership.html">
+        Membership
+    </a>
+    <a href="meettheempireteam.html" class="active">
+        Meet The Team
+    </a>
+
+    <a href="didyouknow.html">
+        Did You Know
+    </a>
+
+ <a href="contactus.html">
+        Contact Us
+    </a>
+
+    
+
+    <a href="join.html">Join Now</a>
+
+</nav>
+
+
+<main class="team-page">
+
+
+
+
+    
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="team-header">
+
+        <div class="gold-line"></div>
+
+        <h1>
+            Meet The Empire Team
+        </h1>
+
+        <p>
+            "Great bodies are built by great discipline.
+            Our trainers are here to help you build yours."
+        </p>
+
+        <span class="quote-author">
+            — IRON EMPIRE
+        </span>
+
+    </header>
+
+
+    <!-- =========================
+         TEAM SLIDER
+    ========================== -->
+
+    <section class="slider-wrapper">
+
+
+        <!-- PREVIOUS -->
+
+        <button
+            class="slider-button previous"
+            id="previousButton"
+            aria-label="Previous trainer"
+        >
+            &#10094;
+        </button>
+
+
+        <!-- SLIDER -->
+
+        <div class="slider-window">
+
+            <div class="slider-track" id="sliderTrack">
+
+
+                <!-- =================================
+                     TRAINER 1
+                ================================== -->
+
+                <article class="slide">
+
+                    <!-- CHANGE IMAGE FILE HERE -->
+
+                    <img
+                        src="pictures and video\iron fitness.jpg"
+                        alt="Iron Empire Trainer 1"
+                        class="trainer-image"
+                        onclick="openViewer(this)"
+                    >
+
+                    
+
+                </article>
+
+
+                <!-- =================================
+                     TRAINER 2
+                ================================== -->
+
+                <article class="slide">
+
+                    <!-- CHANGE IMAGE FILE HERE -->
+
+                    <img
+                        src="pictures and video\d9b174b4-d585-4b4b-a1bb-9ebf74de39e2.jpg"
+                        alt="Iron Empire Trainer 2"
+                        class="trainer-image"
+                        onclick="openViewer(this)"
+                    >
+
+                    
+
+                </article>
+
+
+                <!-- =================================
+                     TRAINER 3
+                ================================== -->
+
+                <article class="slide">
+
+                    <!-- CHANGE IMAGE FILE HERE -->
+
+                    <img
+                        src="pictures and video\b78b1c6d-e98e-4d39-af9d-7611815a0b96.jpg"
+                        alt="Iron Empire Trainer 3"
+                        class="trainer-image"
+                        onclick="openViewer(this)"
+                    >
+
+                    
+
+                </article>
+
+
+                <!-- =================================
+                     TRAINER 4
+                ================================== -->
+
+                <article class="slide">
+
+                    <!-- CHANGE IMAGE FILE HERE -->
+
+                    <img
+                        src="pictures and video\b755bb23-66b3-419b-9f85-fe5c5c0679b6.jpg"
+                        alt="Iron Empire Trainer 4"
+                        class="trainer-image"
+                        onclick="openViewer(this)"
+                    >
+
+                    
+
+                </article>
+
+<!-- =================================
+                     TRAINER 5
+                ================================== -->
+
+                <article class="slide">
+
+                    <!-- CHANGE IMAGE FILE HERE -->
+
+                    <img
+                        src="pictures and video\9ee15dcf-4992-4e12-8f47-9ec1a4b488b5.jpg"
+                        alt="Iron Empire Trainer 5"
+                        class="trainer-image"
+                        onclick="openViewer(this)"
+                    >
+
+                    
+
+                </article>
+            </div>
+
+        </div>
+
+
+        <!-- NEXT -->
+
+        <button
+            class="slider-button next"
+            id="nextButton"
+            aria-label="Next trainer"
+        >
+            &#10095;
+        </button>
+
+
+    </section>
+
+
+    <!-- =========================
+         SLIDE COUNTER
+    ========================== -->
+
+    <div class="slide-counter">
+
+        <span id="currentSlide">1</span>
+        /
+        <span id="totalSlides">4</span>
+
+    </div>
+
+
+    <!-- =========================
+         DOTS
+    ========================== -->
+
+    <div class="dots" id="dots"></div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <div class="team-footer">
+
+        Built by discipline. Driven by strength.
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FULLSCREEN IMAGE VIEWER
+================================================== -->
+
+<div
+    class="image-viewer"
+    id="imageViewer"
+>
+
+
+    <!-- CLOSE -->
+
+    <button
+        class="viewer-close"
+        onclick="closeViewer()"
+        aria-label="Close image viewer"
+    >
+        ×
+    </button>
+
+
+    <!-- IMAGE AREA -->
+
+    <div
+        class="viewer-image-container"
+        id="viewerContainer"
+    >
+
+        <img
+            src=""
+            alt="Zoomed trainer image"
+            class="viewer-image"
+            id="viewerImage"
+        >
+
+    </div>
+
+
+    <!-- INSTRUCTIONS -->
+
+    <div class="viewer-instruction">
+
+        Use + / − or mouse wheel to zoom •
+        Drag image to move
+
+    </div>
+
+
+    <!-- ZOOM CONTROLS -->
+
+    <div class="viewer-controls">
+
+        <button
+            class="zoom-button"
+            onclick="zoomOut()"
+            aria-label="Zoom out"
+        >
+            −
+        </button>
+
+        <div
+            class="zoom-level"
+            id="zoomLevel"
+        >
+            100%
+        </div>
+
+        <button
+            class="zoom-button"
+            onclick="zoomIn()"
+            aria-label="Zoom in"
+        >
+            +
+        </button>
+
+        <button
+            class="zoom-button"
+            onclick="resetZoom()"
+            aria-label="Reset zoom"
+        >
+            ↺
+        </button>
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =========================================
+   SLIDER
+========================================= */
+
+const sliderTrack =
+    document.getElementById("sliderTrack");
+
+const slides =
+    document.querySelectorAll(".slide");
+
+const previousButton =
+    document.getElementById("previousButton");
+
+const nextButton =
+    document.getElementById("nextButton");
+
+const currentSlide =
+    document.getElementById("currentSlide");
+
+const totalSlides =
+    document.getElementById("totalSlides");
+
+const dotsContainer =
+    document.getElementById("dots");
+
+
+let currentIndex = 0;
+
+
+totalSlides.textContent = slides.length;
+
+
+/* =========================================
+   CREATE DOTS
+========================================= */
+
+slides.forEach((slide, index) => {
+
+    const dot = document.createElement("button");
+
+    dot.classList.add("dot");
+
+    dot.setAttribute(
+        "aria-label",
+        "Go to trainer " + (index + 1)
+    );
+
+    dot.addEventListener("click", () => {
+
+        currentIndex = index;
+
+        updateSlider();
+
+    });
+
+    dotsContainer.appendChild(dot);
+
+});
+
+
+const dots =
+    document.querySelectorAll(".dot");
+
+
+/* =========================================
+   UPDATE SLIDER
+========================================= */
+
+function updateSlider() {
+
+    sliderTrack.style.transform =
+        `translateX(-${currentIndex * 100}%)`;
+
+    currentSlide.textContent =
+        currentIndex + 1;
+
+
+    dots.forEach((dot, index) => {
+
+        dot.classList.toggle(
+            "active",
+            index === currentIndex
+        );
+
+    });
+
+}
+
+
+/* =========================================
+   NEXT
+========================================= */
+
+nextButton.addEventListener("click", () => {
+
+    currentIndex++;
+
+    if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+
+    updateSlider();
+
+});
+
+
+/* =========================================
+   PREVIOUS
+========================================= */
+
+previousButton.addEventListener("click", () => {
+
+    currentIndex--;
+
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+    }
+
+    updateSlider();
+
+});
+
+
+/* =========================================
+   KEYBOARD SLIDER CONTROL
+========================================= */
+
+document.addEventListener("keydown", (event) => {
+
+    if (
+        document
+            .getElementById("imageViewer")
+            .classList.contains("active")
+    ) {
+        return;
+    }
+
+
+    if (event.key === "ArrowRight") {
+
+        nextButton.click();
+
+    }
+
+
+    if (event.key === "ArrowLeft") {
+
+        previousButton.click();
+
+    }
+
+});
+
+
+/* =========================================
+   INITIAL SLIDER
+========================================= */
+
+updateSlider();
+
+
+
+/* ==================================================
+   IMAGE ZOOM VIEWER
+================================================== */
+
+const imageViewer =
+    document.getElementById("imageViewer");
+
+const viewerImage =
+    document.getElementById("viewerImage");
+
+const viewerContainer =
+    document.getElementById("viewerContainer");
+
+const zoomLevel =
+    document.getElementById("zoomLevel");
+
+
+let zoom = 1;
+
+let translateX = 0;
+let translateY = 0;
+
+
+/* =========================================
+   OPEN VIEWER
+========================================= */
+
+function openViewer(image) {
+
+    imageViewer.classList.add("active");
+
+    viewerImage.src = image.src;
+
+    viewerImage.alt = image.alt;
+
+    resetZoom();
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================================
+   CLOSE VIEWER
+========================================= */
+
+function closeViewer() {
+
+    imageViewer.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =========================================
+   APPLY TRANSFORM
+========================================= */
+
+function applyTransform() {
+
+    viewerImage.style.transform =
+        `translate(${translateX}px, ${translateY}px) scale(${zoom})`;
+
+    zoomLevel.textContent =
+        Math.round(zoom * 100) + "%";
+
+}
+
+
+/* =========================================
+   ZOOM IN
+========================================= */
+
+function zoomIn() {
+
+    zoom += 0.25;
+
+    if (zoom > 5) {
+        zoom = 5;
+    }
+
+    applyTransform();
+
+}
+
+
+/* =========================================
+   ZOOM OUT
+========================================= */
+
+function zoomOut() {
+
+    zoom -= 0.25;
+
+    if (zoom < 0.5) {
+        zoom = 0.5;
+    }
+
+    applyTransform();
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+function resetZoom() {
+
+    zoom = 1;
+
+    translateX = 0;
+
+    translateY = 0;
+
+    applyTransform();
+
+}
+
+
+/* =========================================
+   MOUSE WHEEL ZOOM
+========================================= */
+
+viewerContainer.addEventListener(
+    "wheel",
+    (event) => {
+
+        event.preventDefault();
+
+
+        if (event.deltaY < 0) {
+
+            zoomIn();
+
+        } else {
+
+            zoomOut();
+
+        }
+
+    },
+    { passive: false }
+);
+
+
+/* =========================================
+   DRAG / PAN
+========================================= */
+
+let dragging = false;
+
+let startX = 0;
+let startY = 0;
+
+let initialX = 0;
+let initialY = 0;
+
+
+viewerContainer.addEventListener(
+    "pointerdown",
+    (event) => {
+
+        dragging = true;
+
+        startX = event.clientX;
+        startY = event.clientY;
+
+        initialX = translateX;
+        initialY = translateY;
+
+        viewerContainer.setPointerCapture(
+            event.pointerId
+        );
+
+    }
+);
+
+
+viewerContainer.addEventListener(
+    "pointermove",
+    (event) => {
+
+        if (!dragging) {
+            return;
+        }
+
+
+        translateX =
+            initialX +
+            (event.clientX - startX);
+
+        translateY =
+            initialY +
+            (event.clientY - startY);
+
+
+        applyTransform();
+
+    }
+);
+
+
+viewerContainer.addEventListener(
+    "pointerup",
+    () => {
+
+        dragging = false;
+
+    }
+);
+
+
+viewerContainer.addEventListener(
+    "pointercancel",
+    () => {
+
+        dragging = false;
+
+    }
+);
+
+
+/* =========================================
+   ESCAPE TO CLOSE
+========================================= */
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (
+            event.key === "Escape" &&
+            imageViewer.classList.contains("active")
+        ) {
+
+            closeViewer();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   CLICK BACKGROUND TO CLOSE
+========================================= */
+
+imageViewer.addEventListener(
+    "click",
+    (event) => {
+
+        if (event.target === imageViewer) {
+
+            closeViewer();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>   
