@@ -1,4 +1,5 @@
- /* =================================================
+ 
+/* =================================================
    IRON EMPIRE - MASTER STYLESHEET
 ================================================= */
 
@@ -14,7 +15,7 @@
 .index-page .hero {
     position: relative;
     width: calc(100% - 20px);
-    min-height: auto;
+    min-height: 90vh;
     margin: 10px auto;
 
     display: flex;
@@ -120,7 +121,7 @@ html,
 background: #2B0A14;  
 color: #fff;  
 font-family: Arial, Helvetica, sans-serif;  
-overflow-x: visible;
+overflow-x: hidden;
 
 }
 
@@ -148,7 +149,7 @@ background: #2B0A14;
             0 0 10px rgba(212, 175, 55, 0.9),  
             0 0 25px rgba(212, 175, 55, 0.45);  
 
-        overflow: visible;  
+        overflow: hidden;  
     }  
 
     /* =========================================  
@@ -161,7 +162,7 @@ background: #2B0A14;
         width: 62%;  
         min-height: 80vh;  
 
-        overflow: visible;
+        overflow: hidden;
 
 background: #2B0A14;
 flex-shrink: 0;
@@ -179,7 +180,7 @@ flex-shrink: 0;
             Keeps the video filling its section  
             without stretching it.  
         */  
-        object-fit: contain;  
+        object-fit: cover;  
 
         /*  
             Brighter and clearer footage  
@@ -448,7 +449,7 @@ z-index: 3;
 
         .video-section {  
             width: 100%;  
-            height: 45vh;  
+            height: 52vh;  
             min-height: 320px;  
             max-height: 520px;  
 
@@ -551,9 +552,7 @@ z-index: 3;
         .welcome p {  
             font-size: 0.68rem;  
         }  
-    }  
-
-
+    }
 
      
      
@@ -3615,7 +3614,7 @@ body {
 
             height: 500px;
 
-            object-fit: contain;
+            object-fit: cover;
 
             display: block;
 
@@ -3851,7 +3850,7 @@ body {
             max-width: 90%;
             max-height: 85%;
 
-            object-fit: contain;
+            object-fit: cover;
 
             user-select: none;
 
